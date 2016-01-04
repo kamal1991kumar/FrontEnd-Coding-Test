@@ -1,0 +1,66 @@
+.header { @include border(1px, #eeeeee, 'bottom'); position:relative;background:#fff; z-index:1;}
+.navigation {
+	position:inherit
+	.navbar-toggle {float:left; border-color:#eee; margin:0 0 0 15px;
+		.icon-bar {
+			background:#222;
+		}
+	}
+	li {
+		a{font-weight: 700;  color:$color-5;  font-size: $font-size-14; line-height:34px; text-transform: uppercase;  letter-spacing: 1px;}
+		&:hover{color: $color-1;}
+	}
+}
+@media (max-width:767px){
+	.navigation {
+		padding: 15px 0; 
+		ul {
+			padding: 10px 15px;    position: absolute;    background: #fff;    left: 0;    right: 0;    top: 65px;    z-index: 3;    box-shadow: 0 8px 10px rgba(0,0,0,.2);
+			li{
+				display:block;
+			}
+		}
+	}
+}
+@media (min-width: 767px) {
+.navigation {
+	padding: 28px 0;
+	ul {
+		padding-left:15px;
+		li {
+			float: left;  margin-left: 30px;
+		}
+	}
+}
+
+.header-info {
+	padding:25px 0;
+	span{
+		font-size:$font-size-15; padding:3px;color:$color-4; display:block;
+	}
+}
+.toplinks {
+	ul{
+		float:right;	
+		li {
+			@include border(1px, #eeeeee, 'left'); float:left; 
+			a{
+				display:block; padding:32px 34px;
+				.icon{
+						width:25px; height:26px; line-height:25px; display:inline-block; background-image:url("../images/header-icons.png"); background-repeat:no-repeat;
+				}
+				.icon-hreat {background-position:-38px -37px;}
+				.icon-search {background-position:-137px -37px;}
+			}
+		}
+	}
+}
+@media (max-width:767px){
+	.toplinks{
+		li{
+			a{
+			display:block; padding:18px 15px;
+			}
+		}
+	}
+}

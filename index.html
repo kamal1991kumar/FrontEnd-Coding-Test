@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>test</title>
+<!-- Bootstrap 
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>-->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!-- start header -->
+<div class="header clearfix">
+	<div class="container-fluid">
+    	<div class="row">
+            <!-- start navigation -->
+            <nav class="navigation clearfix  col-lg-5 col-md-8 col-xs-6 col-sm-8">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navul">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <ul id="navbar" class="navul navbar-collapse collapse">
+                <li><a href="">Home</a></li>
+				<li><a href="">BRANDS</a></li>
+				<li><a href="">DESIGNERS</a></li>
+				<li><a href="">CONTACT</a></li> 
+              </ul>
+            </nav>
+            <!-- end navigation -->
+            <!-- start header-info -->
+            <div class="header-info  col-lg-4 col-md-4 text-center  hidden-sm  hidden-md hidden-xs">
+                <span>Add to cart interaction prototype by Virgil Pana</span>
+                <span>Follow me on <a href="https://dribbble.com/virgilpana" style="color:#ea4c89" target="_blank">Dribbble</a> | <a style="color:#2aa9e0" href="https://twitter.com/virgil_pana" target="_blank">Twitter</a></span>
+            </div>
+            <!-- end header-info -->
+            <!-- start toplinks -->
+            <div class="toplinks   col-lg-3 col-md-4   col-xs-6 col-sm-4">
+                <ul>
+                    <li><a href="#"><i class="icon icon-hreat"></i></a></li>
+                    <li><a href="#"><i class="icon icon-search"></i></a></li>                
+                </ul>
+            </div>
+            <!-- end toplinks -->
+        </div>
+    </div>
+</div>
+<!-- end header --> 
+<!-- start container -->
+<div class="maincontainer">
+	<!-- start leftcol -->
+	<aside class="leftcol"  ng-app="myApp" ng-controller="customersCtrl">
+		<!-- start categorieslist -->
+		<div class="commonlist categoriesbx  checklist">
+			<h3>CATEGORIES</h3>
+			<ul>
+				<li ng-repeat="x in category"><a href="javascript:;"><span></span>{{ x.title }}</a></li>
+			</ul>
+		</div>
+		<!-- end categorieslist -->
+		<!-- start colorslist -->
+		<div class="commonlist colorsbx colorlist">
+			<h3>COLORS</h3>
+			<ul>
+            	<li ng-repeat="x in color"><a href="javascript:;"><span style="background:{{ x.color }};"></span>{{ x.title }}</a></li>
+			</ul>
+		</div>
+		<!-- end colorslist -->
+		<!-- start sizelist -->
+		<div class="commonlist sizesbx checklist">
+			<h3>SIZES</h3>
+			<ul>
+            	<li ng-repeat="x in size"><a href="javascript:;"><span></span>{{ x.title }}</a></li>
+			</ul>
+		</div>
+		<!-- end sizelist -->
+	</aside>
+	<!-- end leftcol -->
+	<!-- start rightcol -->
+	<section class="rightcol"> 
+		<div class="fullcol">
+        	<!-- start gridpanel -->
+			<div class="gridpanel">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-12">
+						<ul>
+							<li>View:</li>
+							<li class="list active"><a href="javascript:;"></a></li>
+							<li class="grid "><a href="javascript:;"></a></li>
+						</ul>
+						<span>Showing 1–9 of 48 results</span>
+						</div>
+					</div>
+				</div>
+			</div>
+            <!-- end gridpanel -->
+        	<!-- start grid -->
+            <div class="grid container-fluid">
+				<div class="row">
+					<div class=" col-sm-12  col-md-6 col-lg-4  col-xlg-3">
+						<div class="proitem">
+							<div class="probx">
+								<!-- start front -->
+								<div class="frontbx">
+									<div class="shadow"></div>
+									<img src="images/1.jpg" alt="" />
+									<div class="btnbx">
+										<button class="btn btn-secondary">Add to CART</button>
+										<div class="clearfix"></div>
+										<button class="btn btn-secondary view_gallery">View gallery</button>
+									</div>
+									<div class="text">
+										<strong>$39</strong>
+										<span class="title">FLUTED HEM DRESS</span>
+										<small  class="des">Summer dress</small>
+										<span>SIZES</span>
+										<small class="size"><i>XS</i>, <i>S</i>, <i>M</i>, <i>L</i>, <i>XL</i>, <i>XXL</i></small>
+										<span>Colors</span>
+										<small class="colorview"><i style="background:#eae3d3;"></i><i style="background:#333;"></i><i style="background:#f56060;"></i><i style="background:#b27ef8;"></i></small>
+									</div>
+								</div>
+								<!-- end front -->
+								<!-- start back -->
+								<div class="backbx">
+									<div class="shadow"></div>
+									<div class="cross"></div>
+									<div class="carousel">
+										<ul class="carouselwrap">
+											<li><img src="images/1.jpg" alt="" /></li>
+											<li><img src="images/2.jpg" alt="" /></li>
+											<li><img src="images/3.jpg" alt="" /></li>
+										</ul>
+										<div class="carousel-arrow">
+											<div class="btnprev"></div>
+											<div class="btnnext"></div>
+										</div>
+									</div>
+								</div>
+								<!-- end back -->
+							</div>
+						</div>
+					</div> 					
+				
+					<div class=" col-sm-12  col-md-6 col-lg-4  col-xlg-3">
+						<div class="proitem">
+							<div class="probx">
+								<!-- start front -->
+								<div class="frontbx">
+									<div class="shadow"></div>
+									<img src="images/2.jpg" alt="" />
+									<div class="btnbx">
+										<button class="btn btn-secondary">Add to CART</button>
+										<div class="clearfix"></div>
+										<button class="btn btn-secondary view_gallery">View gallery</button>
+									</div>
+									<div class="text">
+										<strong>$39</strong>
+										<span class="title">FLUTED HEM DRESS</span>
+										<small  class="des">Summer dress</small>
+										<span>SIZES</span>
+										<small class="size"><i>XS</i>, <i>S</i>, <i>M</i>, <i>L</i>, <i>XL</i>, <i>XXL</i></small>
+										<span>Colors</span>
+										<small class="colorview"><i style="background:#eae3d3;"></i><i style="background:#333;"></i><i style="background:#f56060;"></i><i style="background:#b27ef8;"></i></small>
+									</div>
+								</div>
+								<!-- end front -->
+								<!-- start back -->
+								<div class="backbx">
+									<div class="shadow"></div>
+									<div class="cross"></div>
+									<div class="carousel">
+										<ul class="carouselwrap">
+											<li><img src="images/1.jpg" alt="" /></li>
+											<li><img src="images/2.jpg" alt="" /></li>
+											<li><img src="images/3.jpg" alt="" /></li>
+										</ul>
+										<div class="carousel-arrow">
+											<div class="btnprev"></div>
+											<div class="btnnext"></div>
+										</div>
+									</div>
+								</div>
+								<!-- end back -->
+							</div>
+						</div>
+					</div> 					
+				
+				
+					<div class=" col-sm-12  col-md-6 col-lg-4  col-xlg-3">
+						<div class="proitem">
+							<div class="probx">
+								<!-- start front -->
+								<div class="frontbx">
+									<div class="shadow"></div>
+									<img src="images/4.jpg" alt="" />
+									<div class="btnbx">
+										<button class="btn btn-secondary">Add to CART</button>
+										<div class="clearfix"></div>
+										<button class="btn btn-secondary view_gallery">View gallery</button>
+									</div>
+									<div class="text">
+										<strong>$39</strong>
+										<span class="title">FLUTED HEM DRESS</span>
+										<small  class="des">Summer dress</small>
+										<span>SIZES</span>
+										<small class="size"><i>XS</i>, <i>S</i>, <i>M</i>, <i>L</i>, <i>XL</i>, <i>XXL</i></small>
+										<span>Colors</span>
+										<small class="colorview"><i style="background:#eae3d3;"></i><i style="background:#333;"></i><i style="background:#f56060;"></i><i style="background:#b27ef8;"></i></small>
+									</div>
+								</div>
+								<!-- end front -->
+								<!-- start back -->
+								<div class="backbx">
+									<div class="shadow"></div>
+									<div class="cross"></div>
+									<div class="carousel">
+										<ul class="carouselwrap">
+											<li><img src="images/1.jpg" alt="" /></li>
+											<li><img src="images/2.jpg" alt="" /></li>
+											<li><img src="images/3.jpg" alt="" /></li>
+										</ul>
+										<div class="carousel-arrow">
+											<div class="btnprev"></div>
+											<div class="btnnext"></div>
+										</div>
+									</div>
+								</div>
+								<!-- end back -->
+							</div>
+						</div>
+					</div> 					
+				
+				
+					<div class=" col-sm-12  col-md-6 col-lg-4  col-xlg-3">
+						<div class="proitem">
+							<div class="probx">
+								<!-- start front -->
+								<div class="frontbx">
+									<div class="shadow"></div>
+									<img src="images/2.jpg" alt="" />
+									<div class="btnbx">
+										<button class="btn btn-secondary">Add to CART</button>
+										<div class="clearfix"></div>
+										<button class="btn btn-secondary view_gallery">View gallery</button>
+									</div>
+									<div class="text">
+										<strong>$39</strong>
+										<span class="title">FLUTED HEM DRESS</span>
+										<small  class="des">Summer dress</small>
+										<span>SIZES</span>
+										<small class="size"><i>XS</i>, <i>S</i>, <i>M</i>, <i>L</i>, <i>XL</i>, <i>XXL</i></small>
+										<span>Colors</span>
+										<small class="colorview"><i style="background:#eae3d3;"></i><i style="background:#333;"></i><i style="background:#f56060;"></i><i style="background:#b27ef8;"></i></small>
+									</div>
+								</div>
+								<!-- end front -->
+								<!-- start back -->
+								<div class="backbx">
+									<div class="shadow"></div>
+									<div class="cross"></div>
+									<div class="carousel">
+										<ul class="carouselwrap">
+											<li><img src="images/1.jpg" alt="" /></li>
+											<li><img src="images/2.jpg" alt="" /></li>
+											<li><img src="images/3.jpg" alt="" /></li>
+										</ul>
+										<div class="carousel-arrow">
+											<div class="btnprev"></div>
+											<div class="btnnext"></div>
+										</div>
+									</div>
+								</div>
+								<!-- end back -->
+							</div>
+						</div>
+					</div> 					
+				
+				
+					<div class=" col-sm-12  col-md-6 col-lg-4  col-xlg-3">
+						<div class="proitem">
+							<div class="probx">
+								<!-- start front -->
+								<div class="frontbx">
+									<div class="shadow"></div>
+									<img src="images/1.jpg" alt="" />
+									<div class="btnbx">
+										<button class="btn btn-secondary">Add to CART</button>
+										<div class="clearfix"></div>
+										<button class="btn btn-secondary view_gallery">View gallery</button>
+									</div>
+									<div class="text">
+										<strong>$39</strong>
+										<span class="title">FLUTED HEM DRESS</span>
+										<small  class="des">Summer dress</small>
+										<span>SIZES</span>
+										<small class="size"><i>XS</i>, <i>S</i>, <i>M</i>, <i>L</i>, <i>XL</i>, <i>XXL</i></small>
+										<span>Colors</span>
+										<small class="colorview"><i style="background:#eae3d3;"></i><i style="background:#333;"></i><i style="background:#f56060;"></i><i style="background:#b27ef8;"></i></small>
+									</div>
+								</div>
+								<!-- end front -->
+								<!-- start back -->
+								<div class="backbx">
+									<div class="shadow"></div>
+									<div class="cross"></div>
+									<div class="carousel">
+										<ul class="carouselwrap">
+											<li><img src="images/1.jpg" alt="" /></li>
+											<li><img src="images/2.jpg" alt="" /></li>
+											<li><img src="images/3.jpg" alt="" /></li>
+										</ul>
+										<div class="carousel-arrow">
+											<div class="btnprev"></div>
+											<div class="btnnext"></div>
+										</div>
+									</div>
+								</div>
+								<!-- end back -->
+							</div>
+						</div>
+					</div> 					
+				
+				
+					<div class=" col-sm-12  col-md-6 col-lg-4  col-xlg-3">
+						<div class="proitem">
+							<div class="probx">
+								<!-- start front -->
+								<div class="frontbx">
+									<div class="shadow"></div>
+									<img src="images/4.jpg" alt="" />
+									<div class="btnbx">
+										<button class="btn btn-secondary">Add to CART</button>
+										<div class="clearfix"></div>
+										<button class="btn btn-secondary view_gallery">View gallery</button>
+									</div>
+									<div class="text">
+										<strong>$39</strong>
+										<span class="title">FLUTED HEM DRESS</span>
+										<small  class="des">Summer dress</small>
+										<span>SIZES</span>
+										<small class="size"><i>XS</i>, <i>S</i>, <i>M</i>, <i>L</i>, <i>XL</i>, <i>XXL</i></small>
+										<span>Colors</span>
+										<small class="colorview"><i style="background:#eae3d3;"></i><i style="background:#333;"></i><i style="background:#f56060;"></i><i style="background:#b27ef8;"></i></small>
+									</div>
+								</div>
+								<!-- end front -->
+								<!-- start back -->
+								<div class="backbx">
+									<div class="shadow"></div>
+									<div class="cross"></div>
+									<div class="carousel">
+										<ul class="carouselwrap">
+											<li><img src="images/1.jpg" alt="" /></li>
+											<li><img src="images/2.jpg" alt="" /></li>
+											<li><img src="images/3.jpg" alt="" /></li>
+										</ul>
+										<div class="carousel-arrow">
+											<div class="btnprev"></div>
+											<div class="btnnext"></div>
+										</div>
+									</div>
+								</div>
+								<!-- end back -->
+							</div>
+						</div>
+					</div> 					
+				
+				
+					<div class=" col-sm-12  col-md-6 col-lg-4  col-xlg-3">
+						<div class="proitem">
+							<div class="probx">
+								<!-- start front -->
+								<div class="frontbx">
+									<div class="shadow"></div>
+									<img src="images/3.jpg" alt="" />
+									<div class="btnbx">
+										<button class="btn btn-secondary">Add to CART</button>
+										<div class="clearfix"></div>
+										<button class="btn btn-secondary view_gallery">View gallery</button>
+									</div>
+									<div class="text">
+										<strong>$39</strong>
+										<span class="title">FLUTED HEM DRESS</span>
+										<small  class="des">Summer dress</small>
+										<span>SIZES</span>
+										<small class="size"><i>XS</i>, <i>S</i>, <i>M</i>, <i>L</i>, <i>XL</i>, <i>XXL</i></small>
+										<span>Colors</span>
+										<small class="colorview"><i style="background:#eae3d3;"></i><i style="background:#333;"></i><i style="background:#f56060;"></i><i style="background:#b27ef8;"></i></small>
+									</div>
+								</div>
+								<!-- end front -->
+								<!-- start back -->
+								<div class="backbx">
+									<div class="shadow"></div>
+									<div class="cross"></div>
+									<div class="carousel">
+										<ul class="carouselwrap">
+											<li><img src="images/1.jpg" alt="" /></li>
+											<li><img src="images/2.jpg" alt="" /></li>
+											<li><img src="images/3.jpg" alt="" /></li>
+										</ul>
+										<div class="carousel-arrow">
+											<div class="btnprev"></div>
+											<div class="btnnext"></div>
+										</div>
+									</div>
+								</div>
+								<!-- end back -->
+							</div>
+						</div>
+					</div> 					
+				
+				
+				</div>
+			</div>
+            <!-- end grid -->
+		</div>
+	</section>	
+	<!-- end rightcol -->
+</div>	
+<!-- end container -->
+<script src="js/jquery.min.js"></script>  
+<script src="js/angular.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script> 
+</body>
+</html>

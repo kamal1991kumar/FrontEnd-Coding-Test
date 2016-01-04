@@ -1,0 +1,110 @@
+body{font-family:$font-family;font-size:$font-size-15;background:$color-9;}
+
+
+
+h3 {color: $color-6;text-transform: uppercase;    font-size: $font-size-14;    font-weight: 700;    padding: 35px 0 10px 0;    letter-spacing: 1px; clear:both}
+
+.leftcol {padding:13px 0 0 45px; width:320px; float:left;}
+.rightcol {margin-left:330px;padding-right:15px;}
+.rightcol:after{ @include border(1px, #eeeeee, 'left'); position:absolute; content:''; left:320px;bottom:0;top:0;}
+.fullcol {width:100%; float:left;}
+@media (max-width:767px){
+.leftcol {padding:13px 15px 30px; width:auto; float:none; }
+.rightcol {padding:0px; margin-left:0;}
+.rightcol:after{display:none;}
+}
+
+.commonlist li{font-size:$font-size-14;	font-weight:400;padding: 7px 0 7px 23px;}
+
+.checklist li span{float:left;	width:13px;	height:13px;	margin-left:-23px;	margin-top:1px;	border: 1px solid #d1d3d7;	position:relative;}
+.checklist li span:after, .checklist li span:before{position:absolute; content:"";}
+.checklist li span:after {display:block;width:0;height:2px;	background:#5ff7d2;	top:6px;left:2px; @include transform(rotate(45deg));	@include transition(all 50ms ease-out);}
+.checklist li span.animate:after{width:4px;@include transition(all 100ms ease-in);}
+.checklist li span:before{	display:block;	width:0px; 	height:2px;	background:#5ff7d2;	top:4px;	left:3px;		@include transform(rotate(135deg)); @include transition(all 50ms ease-out); }
+.checklist li span.animate:before{width:8px; @include transition(all 100ms ease-out);}
+.checklist a:hover span {	border: 1px solid #a6aab3;}
+.checklist .checked span {	border: 1px solid #8d939f;}
+
+.colorsbx a span{position:relative;	border-radius:100%;	background:#eae3d3;	width:13px;	height:13px;margin-left:-20px; float:left;@include transition(all 100ms ease-out); @include transform(scale(1.0));}
+.colorsbx a:hover span{@include transition(all 100ms ease-out);@include transform(scale(1.3)); }
+
+.sizesbx li, .colorsbx li{width:50%; float:left;}
+
+
+.gridpanel { padding: 40px 0;  color: #5d5f68;    font-size:$font-size-14; line-height:25px;}
+.gridpanel ul{float:right;}
+.gridpanel li{float:left;margin:0 0 0 7px;}
+.gridpanel li a{display:block;	 width:25px; height:25px;	 background: url("../images/grid-menu.png") no-repeat;}
+.gridpanel li.list a{background-position:0 -33px;}
+.gridpanel li.active.list a{background-position:0 0;}
+.gridpanel li.grid a{background-position:-37px 0;}
+.gridpanel li.active.grid a{background-position:-37px -33px;}
+
+.proitem{    position: relative;    perspective: 800px;    width:100%;    height:500px;    @include transform-style(preserve-3d) ;     @include transition(transform 5s);	float:left; @include transition(width 500ms ease-in-out);}
+.probx {width:100%; height:500px; overflow:hidden; position:relative;@include transition(all 100ms ease-out);  transform-style: preserve-3d; margin:0 0 15px 0}
+.probx.animate {box-shadow:0px 5px 31px -1px rgba(0, 0, 0, 0.15);}
+.probx.flip10{@include transform(rotateY(-10deg)); @include transition(50ms ease-out);}
+.probx.flip90{@include transform(rotateY(90deg)); @include transition(100ms ease-in);}
+.probx.flip190{@include transform(rotateY(190deg)); @include transition(100ms ease-out);}
+.probx.flip180{@include transform(rotateY(180deg)); @include transition(150ms ease-out);}
+
+.frontbx, .backbx  {width:100%; height:500px; overflow:hidden; position:relative;@include transition(all 100ms ease-out); position:absolute; left:0; right:0;}
+.backbx {display:none;@include transform(rotateY(180deg));}
+.shadow{	width:100%;height:500px;	opacity:0;	position:absolute;	top:0;	left:0;	z-index:3;	display:none;
+	background: -webkit-linear-gradient(left,rgba(0,0,0,0.1),rgba(0,0,0,0.2));
+    background: -o-linear-gradient(right,rgba(0,0,0,0.1),rgba(0,0,0,0.2)); 
+    background: -moz-linear-gradient(right,rgba(0,0,0,0.1),rgba(0,0,0,0.2)); 
+    background: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.2)); 
+}
+.backbx .shadow{	z-index:10;	opacity:1;
+	background: -webkit-linear-gradient(left,rgba(0,0,0,0.2),rgba(0,0,0,0.1));
+    background: -o-linear-gradient(right,rgba(0,0,0,0.2),rgba(0,0,0,0.1)); 
+    background: -moz-linear-gradient(right,rgba(0,0,0,0.2),rgba(0,0,0,0.1)); 
+    background: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0.1)); 
+}
+
+
+.frontbx:after{position:absolute; content:"";left:0;right:0;top:0;bottom:0;background:$color-7;}
+.frontbx:after, .frontbx .btnbx {opacity:0;@include transition(all 200ms ease-out);}
+.frontbx:hover:after{opacity:0.7;}
+.frontbx img {width:100%;}
+.frontbx .text{padding:30px 35px; background:#fff; position:absolute; top:410px; left:0; right:0; z-index:1;@include transition(all 200ms ease-out);}
+.frontbx:hover .text {top:290px;}
+.frontbx span, .frontbx small {display:block;}
+.frontbx span {color:$color-8; font-weight:700; font-size:font-size-15; text-transform:uppercase; }
+.frontbx small{font-size:font-size-15;color:$color-4; padding:5px 0 15px 0;}
+.frontbx strong{float:right;color:$color-7;font-size:$font-size-22; font-weight:600;}
+.frontbx .des {padding:5px 0 30px 0;}
+.frontbx .size i {font-style:normal;}
+.frontbx .size i:hover {color:#222;}
+.colorview i{position:relative;	border-radius:100%;	background:#eae3d3;	width:13px;	height:13px;@include transition(all 100ms ease-out); @include transform(scale(1.0)); float:left; margin:0 5px 0 0}
+.colorview i:hover{@include transition(all 100ms ease-out);@include transform(scale(1.3)); }
+.frontbx .btnbx {position:absolute;top:80px; z-index:2; left:0; right:0; text-align:center;}
+.frontbx .btnbx .btn {margin:10px 0;}
+.frontbx:hover .btnbx{opacity:1;}
+
+.carousel{width:100%;	height:500px;	overflow:hidden;	position:relative;}
+.carousel ul{	position:absolute;	top:0;	left:0;}
+.carousel li{	width:100%;	height:500px;	float:left;	overflow:hidden;	}
+.carousel img{width: 100%;}
+.carousel-arrow{position: absolute;	top: 218px; width:100%;  transform-style: preserve-3d;    transition: transform 5s;	perspective:400px;}
+.btnprev, .btnnext{width: 50px;	height: 55px;	background: #ccc;	position: absolute;		top:0;	@include transition(all 200ms ease-out);	opacity:0.9;	cursor:pointer;}
+.btnprev{left: -26px;@include transform(rotateY(117deg));}
+.btnnext{right: -26px;@include transform(rotateY(-117deg));}
+.btnprev.visible, .btnnext.visible {background: #fff;opacity:0.8;@include transform(rotateY(0deg));}
+.btnprev.visible{left:0;}
+.btnnext.visible{right:0;}
+.carousel-arrow div:after, .carousel-arrow div:before{	height:2px;	width:15px;	background:#5ff7d2;	position:absolute;	top:31px;	left:17px; content:''; }
+.carousel-arrow .btnprev:after{@include transform(rotate(45deg));}
+.carousel-arrow .btnprev:before{@include transform(rotate(135deg));top:21px;}
+.carousel-arrow .btnnext:after{@include transform(rotate(-135deg));top:21px;}
+.carousel-arrow .btnnext:before{@include transform(rotate(-45deg));}
+.backbx .cross{position:absolute;	top:15px;	right:15px;	width:30px;	height:30px;	cursor:pointer;@include transition(all 250ms ease-out);}
+.backbx .cross:after, .backbx .cross:before{background:#d2d5dc;	position:absolute;	width:3px;	height:30px;content:'';@include transition(all 250ms ease-out);z-index:2; left:13px;}
+.backbx .cross:after {@include transform(rotate(45deg));}
+.backbx .cross:before{@include transform(rotate(-45deg));}
+.backbx .cross:hover:after, .backbx .cross:hover:before{background:#979ca7;}
+.backbx .cross.s1 {@include transition(all 100ms ease-out); z-index:1;}
+.backbx .cross.s2 {@include transform(rotate(45deg));@include transition(all 100ms ease-out);}
+.backbx .cross.s3 {@include transform(rotate(90deg));@include transition(all 100ms ease-out);}
+
