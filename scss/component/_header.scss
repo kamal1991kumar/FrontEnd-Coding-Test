@@ -29,6 +29,7 @@
 		padding-left:15px;
 		li {
 			float: left;  margin-left: 30px;
+			}
 		}
 	}
 }
@@ -57,9 +58,11 @@
 }
 @media (max-width:767px){
 	.toplinks{
-		li{
-			a{
-			display:block; padding:18px 15px;
+		ul {
+			li{
+				a{
+					display:block; padding:18px 15px;
+				}
 			}
 		}
 	}

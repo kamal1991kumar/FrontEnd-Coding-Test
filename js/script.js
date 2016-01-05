@@ -69,7 +69,7 @@ app.controller('customersCtrl', function($scope, $http, $timeout) {
         });
 		
  });
-makeCarousel();
+	makeCarousel();
    $(window).resize(function(){
 	  	location.reload();
 		makeCarousel();

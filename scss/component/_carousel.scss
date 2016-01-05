@@ -1,0 +1,24 @@
+.carousel{width:100%;	height:500px;	overflow:hidden;	position:relative;}
+.carousel ul{	position:absolute;	top:0;	left:0;}
+.carousel li{	width:100%;	height:500px;	float:left;	overflow:hidden;	}
+.carousel li img{width: 100%;}
+.carousel-arrow{position: absolute;	top: 218px; width:100%;  transform-style: preserve-3d;    transition: transform 5s;	perspective:400px;}
+.btnprev, .btnnext{width: 50px;	height: 55px;	background: #ccc;	position: absolute;		top:0;	@include transition(all 200ms ease-out);	opacity:0.9;	cursor:pointer;}
+.btnprev{left: -26px;@include transform(rotateY(117deg));}
+.btnnext{right: -26px;@include transform(rotateY(-117deg));}
+.btnprev.visible, .btnnext.visible {background: #fff;opacity:0.8;@include transform(rotateY(0deg));}
+.btnprev.visible{left:0;}
+.btnnext.visible{right:0;}
+.carousel-arrow div:after, .carousel-arrow div:before{	height:2px;	width:15px;	background:#5ff7d2;	position:absolute;	top:31px;	left:17px; content:''; }
+.carousel-arrow .btnprev:after{@include transform(rotate(45deg));}
+.carousel-arrow .btnprev:before{@include transform(rotate(135deg));top:21px;}
+.carousel-arrow .btnnext:after{@include transform(rotate(-135deg));top:21px;}
+.carousel-arrow .btnnext:before{@include transform(rotate(-45deg));}
+.backbx .cross{position:absolute;	top:15px;	right:15px;	width:30px;	height:30px;	cursor:pointer;@include transition(all 250ms ease-out);}
+.backbx .cross:after, .backbx .cross:before{background:#d2d5dc;	position:absolute;	width:3px;	height:30px;content:'';@include transition(all 250ms ease-out);z-index:2; left:13px;}
+.backbx .cross:after {@include transform(rotate(45deg));}
+.backbx .cross:before{@include transform(rotate(-45deg));}
+.backbx .cross:hover:after, .backbx .cross:hover:before{background:#979ca7;}
+.backbx .cross.s1 {@include transition(all 100ms ease-out); z-index:1;}
+.backbx .cross.s2 {@include transform(rotate(45deg));@include transition(all 100ms ease-out);}
+.backbx .cross.s3 {@include transform(rotate(90deg));@include transition(all 100ms ease-out);} 

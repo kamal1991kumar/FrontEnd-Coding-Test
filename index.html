@@ -73,7 +73,7 @@
 		<div class="commonlist colorsbx colorlist">
 			<h3>COLORS</h3>
 			<ul>
-            	<li ng-repeat="x in color"><a href="javascript:;"><span style="background:{{ x.color }};"></span>{{ x.title }}</a></li>
+            	<li ng-repeat="x in color"><a href="javascript:;"><span style="background:{{ x.color }}; box-shadow:{{ x.shadow }};"></span>{{ x.title }}</a></li>
 			</ul>
 		</div>
 		<!-- end colorslist -->
@@ -427,6 +427,7 @@
 			</div>
             <!-- end grid -->
 		</div>
+		 
 	</section>	
 	<!-- end rightcol -->
 </div>	

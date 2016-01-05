@@ -1,20 +1,21 @@
 .btn{
-@include border-radius(0);
-@include border(2px, $color-7, 'all');
-color:$color-9;
-font-weight:700;
-text-transform:uppercase; 
-background:none;
-@include transition(all 200ms ease-out);
+	@include border-radius(0);
+	@include border(2px, $color-7, 'all');
+	color:$color-9;
+	font-weight:700;
+	text-transform:uppercase; 
+	background:none;
+	@include transition(all 200ms ease-out);
 }
 .btn-secondary{
-padding:10px 12px;
-font-size:$font-size-15;
-width:152px;
-text-align:center;
-border-color:$color-9;
-}
-.btn-secondary:hover, .btn-secondary:focus{
-	background-color:$color-9;
-	color:$color-7;
-}
+	padding:10px 12px;
+	font-size:$font-size-15;
+	width:152px;
+	text-align:center;
+	border-color:$color-9;
+	
+	&:hover,&:focus{
+		background-color:$color-9;
+		color:$color-7;
+	}
+} 

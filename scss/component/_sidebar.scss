@@ -1,0 +1,14 @@
+.commonlist li{font-size:$font-size-14;	font-weight:400;padding: 7px 0 7px 23px;}
+.checklist li span{float:left;	width:13px;	height:13px;	margin-left:-23px;	margin-top:1px;	border: 1px solid #d1d3d7;	position:relative;}
+.checklist li span:after, .checklist li span:before{position:absolute; content:"";}
+.checklist li span:after {display:block;width:0;height:2px;	background:#5ff7d2;	top:6px;left:2px; @include transform(rotate(45deg));	@include transition(all 50ms ease-out);}
+.checklist li span.animate:after{width:4px;@include transition(all 100ms ease-in);}
+.checklist li span:before{	display:block;	width:0px; 	height:2px;	background:#5ff7d2;	top:4px;	left:3px;		@include transform(rotate(135deg)); @include transition(all 50ms ease-out); }
+.checklist li span.animate:before{width:8px; @include transition(all 100ms ease-out);}
+.checklist a:hover span {	border: 1px solid #a6aab3;}
+.checklist .checked span {	border: 1px solid #8d939f;}
+
+.colorsbx a span{position:relative;	border-radius:100%;	background:#eae3d3;	width:13px;	height:13px;margin-left:-20px; float:left;@include transition(all 100ms ease-out); @include transform(scale(1.0));}
+.colorsbx a:hover span{@include transition(all 100ms ease-out);@include transform(scale(1.3)); }
+
+.sizesbx li, .colorsbx li{width:50%; float:left;} 

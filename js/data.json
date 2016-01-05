@@ -6,6 +6,6 @@
 	{"title" : "XS"},{"title" : "L"},{"title" : "S"},{"title2" : "XL"},{"title" : "M"},{"title" : "XXL"}
 ],
 "colors": [
-	{"title" : "Beige", "color" : "#eae3d3"}, {"title" : "Black", "color" : "#222"}, {"title" : "Grey", "color" : "#999"}, {"title" : "Orange", "color" : "#f79858"}, {"title" : "Purple", "color" : "#b27ef8"}, {"title" : "Brown", "color" : "#f56060"}, {"title" : "Green", "color" : "#44c28d"}, {"title" : "White", "color" : "#f1f1f1"}, {"title" : "Red", "color" : "#f56060"}
+	{"title" : "Beige", "color" : "#eae3d3"}, {"title" : "Black", "color" : "#222"}, {"title" : "Grey", "color" : "#999"}, {"title" : "Orange", "color" : "#f79858"}, {"title" : "Purple", "color" : "#b27ef8"}, {"title" : "Brown", "color" : "#f56060"}, {"title" : "Green", "color" : "#44c28d"}, {"title" : "White", "color" : "#fff", "shadow" : "inset 0 0 0 1px #e8e9eb"}, {"title" : "Red", "color" : "#f56060"}
 ]
 }
